@@ -8,14 +8,14 @@ import java.util.List;
 @Entity
 @Table(name = "TB_GROUP")
 @Data
-public class Group {
+public class GroupEntity {
     @Id
     private String GROUP_ID;
     private String GROUP_NM;
 
-    @OneToMany(mappedBy = "group", fetch = FetchType.LAZY)
-    List<User> userList;
+    @OneToMany(mappedBy = "groupEntity", fetch = FetchType.LAZY)
+    List<UserEntity> userEntityList;
 
     @OneToMany(mappedBy = "group", fetch = FetchType.LAZY)
-    List<Project> projectList;
+    List<ProjectEntity> projectEntityList;
 }

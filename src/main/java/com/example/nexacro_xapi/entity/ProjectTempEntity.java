@@ -8,11 +8,11 @@ import java.util.List;
 @Entity
 @Table(name = "TB_PROJECT_TEMP")
 @Data
-public class Project_Temp {
+public class ProjectTempEntity {
     @Id
     private String TEMP_ID;
     private String TEMP_NM;
 
     @OneToMany(mappedBy = "projectTemp", fetch = FetchType.LAZY)
-    List<Project> projectList;
+    List<ProjectEntity> projectEntityList;
 }

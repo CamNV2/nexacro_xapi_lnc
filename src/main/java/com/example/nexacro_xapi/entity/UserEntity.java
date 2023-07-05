@@ -10,12 +10,12 @@ import java.util.List;
 @Entity
 @Table(name = "TB_USER")
 @Data
-public class User {
+public class UserEntity {
     @Id
     private String USR_ID;
     private String USR_NM;
-    private String PWD;
-    private String ADDRESS;
+    private String USR_PWD;
+    private String USR_ADDRESS;
     private String USR_YN;
     private Date CREATE_ID;
     private Date CREATE_DT;
@@ -25,13 +25,13 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "GROUP_ID")
-    private Group group;
+    private GroupEntity groupEntity;
     @ManyToOne
     @JoinColumn(name = "ROLE_ID")
-    private Role role;
+    private RoleEntity roleEntity;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<SubTask> taskList;
+    private List<SubTaskEntity> taskList;
 
 
 }

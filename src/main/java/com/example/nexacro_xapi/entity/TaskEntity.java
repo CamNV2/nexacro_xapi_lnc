@@ -9,10 +9,10 @@ import java.util.List;
 @Entity
 @Table(name = "TB_TASK")
 @Data
-public class Task {
+public class TaskEntity {
     @Id
     private String TASK_ID;
-    private String NM;
+    private String TASK_NM;
     private String TASK_OWNER;
     private String TASK_STT;
     private Date TASK_START_DT;
@@ -22,8 +22,8 @@ public class Task {
     private String TASK_BILL;
     @ManyToOne
     @JoinColumn(name = "PJ_ID")
-    private Project project;
+    private ProjectEntity projectEntity;
 
     @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
-    private List<SubTask> taskList;
+    private List<SubTaskEntity> taskList;
 }

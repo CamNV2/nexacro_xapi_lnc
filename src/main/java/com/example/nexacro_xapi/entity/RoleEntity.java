@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Table(name = "TB_ROLE")
 @Data
-public class Role {
+public class RoleEntity {
     @Id
     private String ROLE_ID;
     private String ROLE_NM;
@@ -18,6 +18,6 @@ public class Role {
     private Date LAST_CHG_DT;
 
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
-    List<User> userList;
+    List<UserEntity> userEntityList;
 
 }
