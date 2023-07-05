@@ -24,6 +24,6 @@ public class TaskEntity {
     @JoinColumn(name = "PJ_ID")
     private ProjectEntity projectEntity;
 
-    @OneToMany(mappedBy = "task", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "taskEntity", fetch = FetchType.LAZY)
     private List<SubTaskEntity> taskList;
 }

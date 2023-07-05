@@ -16,6 +16,6 @@ public class GroupEntity {
     @OneToMany(mappedBy = "groupEntity", fetch = FetchType.LAZY)
     List<UserEntity> userEntityList;
 
-    @OneToMany(mappedBy = "group", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "groupEntity", fetch = FetchType.LAZY)
     List<ProjectEntity> projectEntityList;
 }

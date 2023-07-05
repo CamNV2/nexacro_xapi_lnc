@@ -17,7 +17,7 @@ public class RoleEntity {
     private String LAST_CHG_ID;
     private Date LAST_CHG_DT;
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "roleEntity", fetch = FetchType.LAZY)
     List<UserEntity> userEntityList;
 
 }

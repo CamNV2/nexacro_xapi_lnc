@@ -30,7 +30,7 @@ public class UserEntity {
     @JoinColumn(name = "ROLE_ID")
     private RoleEntity roleEntity;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "userEntity", fetch = FetchType.LAZY)
     private List<SubTaskEntity> taskList;
 
 

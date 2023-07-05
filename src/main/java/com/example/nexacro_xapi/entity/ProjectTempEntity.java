@@ -13,6 +13,6 @@ public class ProjectTempEntity {
     private String TEMP_ID;
     private String TEMP_NM;
 
-    @OneToMany(mappedBy = "projectTemp", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "projectTempEntity", fetch = FetchType.LAZY)
     List<ProjectEntity> projectEntityList;
 }

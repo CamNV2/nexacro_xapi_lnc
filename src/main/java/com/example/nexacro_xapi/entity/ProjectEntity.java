@@ -28,11 +28,11 @@ public class ProjectEntity {
 
     @ManyToOne
     @JoinColumn(name = "TEMP_ID")
-    private ProjectTempEntity projectTemp;
+    private ProjectTempEntity projectTempEntity;
     @ManyToOne
     @JoinColumn(name = "GROUP_ID")
     private GroupEntity groupEntity;
 
-    @OneToMany(mappedBy = "project", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "projectEntity", fetch = FetchType.LAZY)
     List<TaskEntity> taskEntityList;
 }
