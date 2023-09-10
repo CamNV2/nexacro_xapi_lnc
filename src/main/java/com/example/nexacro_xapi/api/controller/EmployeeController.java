@@ -2,11 +2,10 @@ package com.example.nexacro_xapi.api.controller;
 
 import com.example.nexacro_xapi.api.service.EmployeeService;
 import com.example.nexacro_xapi.common.NexacroConvert;
+import com.example.nexacro_xapi.entity.EmployeeEntity;
 import com.example.nexacro_xapi.entity.response.ColumnEntity;
 import com.example.nexacro_xapi.entity.response.Dataset;
 import com.example.nexacro_xapi.entity.response.ResponseEntity;
-
-import com.example.nexacro_xapi.entity.employee.EmployeeEntity;
 import com.nexacro.java.xapi.data.DataSet;
 import com.nexacro.java.xapi.data.PlatformData;
 import com.nexacro.java.xapi.tx.HttpPlatformRequest;
@@ -74,4 +73,5 @@ public class EmployeeController {
 
         return "nexacroView";
     }
+
 }

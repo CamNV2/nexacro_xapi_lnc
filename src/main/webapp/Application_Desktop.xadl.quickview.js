@@ -9,7 +9,9 @@
 			// global dataobject
 		
             // global dataset
-
+            obj = new Dataset("ds_input_project", this);
+            obj._setContents("<ColumnInfo><Column id=\"id\" type=\"STRING\" size=\"256\"/><Column id=\"title\" type=\"STRING\" size=\"256\"/><Column id=\"progress\" type=\"STRING\" size=\"256\"/><Column id=\"owner\" type=\"STRING\" size=\"256\"/><Column id=\"status\" type=\"STRING\" size=\"256\"/><Column id=\"strtDate\" type=\"STRING\" size=\"256\"/><Column id=\"endDate\" type=\"STRING\" size=\"256\"/><Column id=\"tagName\" type=\"STRING\" size=\"256\"/><Column id=\"progressTask\" type=\"STRING\" size=\"256\"/><Column id=\"isDone\" type=\"STRING\" size=\"256\"/><Column id=\"template\" type=\"STRING\" size=\"256\"/><Column id=\"description\" type=\"STRING\" size=\"256\"/><Column id=\"isAccessPrivate\" type=\"STRING\" size=\"256\"/><Column id=\"isTightPrj\" type=\"STRING\" size=\"256\"/><Column id=\"groupId\" type=\"STRING\" size=\"256\"/></ColumnInfo>");
+            this._addDataset(obj.name, obj);
             
             // global variable
 
@@ -22,7 +24,7 @@
         {
             // properties
             this.set_id("Application_Desktop");
-            this.set_screenid("Desktop_screen");
+            this.set_screenid("screen00_02");
 
             if (this._is_attach_childframe)
             	return;
@@ -31,7 +33,7 @@
             var mainframe = this.createMainFrame("mainframe","0","0","1280","720",null,null,this);
             mainframe.set_showtitlebar("true");
             mainframe.set_showstatusbar("true");
-            mainframe.set_titletext("FullFrame");
+            mainframe.set_titletext("LeftTopFrame");
             mainframe.on_createBodyFrame = this.mainframe_createBodyFrame;
             // tray
 
@@ -65,7 +67,7 @@
 		this.checkLicense("");
         
         this.loadPreloadList();
-
+        this.loadCss("xcssrc::theme1.xcss");
         this.loadIncludeScript("Application_Desktop.xadl");
     };
 }

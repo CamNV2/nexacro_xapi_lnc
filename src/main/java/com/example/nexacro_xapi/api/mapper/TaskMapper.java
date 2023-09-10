@@ -1,9 +1,13 @@
+
 package com.example.nexacro_xapi.api.mapper;
 
-import com.example.nexacro_xapi.entity.employee.TaskEntity;
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
+
+import com.example.nexacro_xapi.entity.ProjectEntity;
 
 @Mapper
 public interface TaskMapper {
-    int createTask(TaskEntity taskEntity);
+    List<ProjectEntity> getList(ProjectEntity projectEntity);
 }

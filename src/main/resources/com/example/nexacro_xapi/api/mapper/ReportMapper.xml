@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.nexacro_xapi.api.mapper.ReportMapper" >
+    <select id="getList"
+            parameterType="com.example.nexacro_xapi.entity.ReportEntity"
+            resultType="com.example.nexacro_xapi.entity.ReportEntity">
+        SELECT 
+			id,title
+			, 10 AS progress
+			,(SELECT username FROM users WHERE id = owner_id) owner
+			,status
+			,strt_date
+			,end_date
+			,tag_name
+			,10 AS progress_task
+			,true AS is_done
+			,template
+			,description
+			,is_access_private
+			,is_tight_prj
+		FROM projects
+        <where>
+            1 = 1
+            <if test="title != null and title != ''">
+             AND   title like '%' || #{title} || '%'
+            </if>
+        </where>
+    </select>
+</mapper>
