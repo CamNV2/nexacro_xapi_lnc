@@ -85,12 +85,118 @@
             			},
             			"Button" :
             			{
+            				"class" :
+            				[
+            					{
+            						"btnAddTask" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"color" : nexacro.ColorObject("#ffffff")
+            								},
+            								"focused" :
+            								{
+            									"color" : nexacro.ColorObject("#ffffff")
+            								},
+            								"mouseover" :
+            								{
+            									"color" : nexacro.ColorObject("#ff6400")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"btn-filter" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"mouseover" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"focused" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"btn-menu" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"mouseover" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"focused" :
+            								{
+            									"border" : nexacro.BorderObject("0px")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"btn-login" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"font" : nexacro.FontObject("normal 700 10pt/normal \"Arial\"")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"btn-add-project" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"color" : nexacro.ColorObject("#fff"),
+            									"font" : nexacro.FontObject("normal 700 10pt/normal \"Arial\"")
+            								},
+            								"mouseover" :
+            								{
+            									"color" : nexacro.ColorObject("#fff"),
+            									"font" : nexacro.FontObject("normal 700 10pt/normal \"Arial\"")
+            								},
+            								"focused" :
+            								{
+            									"color" : nexacro.ColorObject("#fff"),
+            									"font" : nexacro.FontObject("normal 700 10pt/normal \"Arial\"")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"isCollapse" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"icon" : nexacro.UrlObject("url('theme://images/btn_expand_1.png')")
+            								}
+            							}
+            						}
+            					}
+            				],
             				"self" :
             				{
-            					"enabled" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #c2c2c2")
-            					},
             					"mouseover" :
             					{
             						"border" : nexacro.BorderObject("1px solid #a0a0a0")
@@ -103,32 +209,6 @@
             					{
             					},
             					"selected" :
-            					{
-            					},
-            					"disabled" :
-            					{
-            						"color" : nexacro.ColorObject("#bbbbbb"),
-            						"border" : nexacro.BorderObject("1px solid #d9d9d9")
-            					}
-            				}
-            			},
-            			"FileDownload" :
-            			{
-            				"self" :
-            				{
-            					"enabled" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #c2c2c2")
-            					},
-            					"mouseover" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            					},
-            					"focused" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            					},
-            					"pushed" :
             					{
             					},
             					"disabled" :
@@ -203,6 +283,28 @@
             								}
             							}
             						}
+            					}
+            				}
+            			},
+            			"FileDownload" :
+            			{
+            				"self" :
+            				{
+            					"mouseover" :
+            					{
+            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            					},
+            					"focused" :
+            					{
+            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            					},
+            					"pushed" :
+            					{
+            					},
+            					"disabled" :
+            					{
+            						"color" : nexacro.ColorObject("#bbbbbb"),
+            						"border" : nexacro.BorderObject("1px solid #d9d9d9")
             					}
             				}
             			},
@@ -547,7 +649,33 @@
             					{
             						"color" : nexacro.ColorObject("#999999")
             					}
-            				}
+            				},
+            				"class" :
+            				[
+            					{
+            						"cbx-project-search" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"color" : nexacro.ColorObject("#FF6400"),
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"mouseover" :
+            								{
+            									"color" : nexacro.ColorObject("#FF6400"),
+            									"border" : nexacro.BorderObject("0px")
+            								},
+            								"focused" :
+            								{
+            									"color" : nexacro.ColorObject("#FF6400"),
+            									"border" : nexacro.BorderObject("0px")
+            								}
+            							}
+            						}
+            					}
+            				]
             			},
             			"ComboControl" :
             			{
@@ -639,7 +767,8 @@
             					"enabled" :
             					{
             						"border" : nexacro.BorderObject("1px solid #d5d5d5"),
-            						"padding" : nexacro.PaddingObject("1px 9px 0px 9px")
+            						"padding" : nexacro.PaddingObject("1px 9px 0px 9px"),
+            						"font" : nexacro.FontObject("normal 11px/normal \"Oxygen', sans-serif\"")
             					},
             					"mouseover" :
             					{
@@ -660,7 +789,22 @@
             					{
             						"color" : nexacro.ColorObject("#999999")
             					}
-            				}
+            				},
+            				"class" :
+            				[
+            					{
+            						"input-group" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"font" : nexacro.FontObject("normal 11px/normal \"Oxygen', sans-serif\"")
+            								}
+            							}
+            						}
+            					}
+            				]
             			},
             			"fileuploaditemedit" :
             			{
@@ -677,7 +821,8 @@
             									"enabled" :
             									{
             										"border" : nexacro.BorderObject("1px solid #d5d5d5"),
-            										"padding" : nexacro.PaddingObject("1px 9px 0px 9px")
+            										"padding" : nexacro.PaddingObject("1px 9px 0px 9px"),
+            										"font" : nexacro.FontObject("normal 11px/normal \"Oxygen', sans-serif\"")
             									},
             									"mouseover" :
             									{
@@ -866,13 +1011,220 @@
             					}
             				}
             			},
-            			"Grid" :
+            			"cellbutton" :
             			{
-            				"self" :
+            				"parent" :
             				{
-            					"enabled" :
+            					"cell" :
             					{
-            						"border" : nexacro.BorderObject("2px solid #125dae, 1px solid #b7b1b2, 1px solid #b7b1b2, 1px solid #b7b1b2")
+            						"class" :
+            						[
+            							{
+            								"stat1" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"self" :
+            															{
+            																"enabled" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"disabled" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"mouseover" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"focused" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																}
+            															}
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"stat2" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"self" :
+            															{
+            																"enabled" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"disabled" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"mouseover" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"focused" :
+            																{
+            																	"color" : nexacro.ColorObject("#ffffff"),
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																}
+            															}
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"stat3" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"self" :
+            															{
+            																"enabled" :
+            																{
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"disabled" :
+            																{
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"mouseover" :
+            																{
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																},
+            																"focused" :
+            																{
+            																	"border" : nexacro.BorderObject("0px none"),
+            																	"padding" : nexacro.PaddingObject("4px 0px 4px 8px")
+            																}
+            															}
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							}
+            						]
+            					},
+            					"GridCellControl" :
+            					{
+            						"self" :
+            						{
+            							"enabled" :
+            							{
+            								"font" : nexacro.FontObject("12px \"Malgun Gothic\""),
+            								"color" : nexacro.ColorObject("#555555"),
+            								"border" : nexacro.BorderObject("1px solid #c2c2c2")
+            							},
+            							"mouseover" :
+            							{
+            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            							},
+            							"focused" :
+            							{
+            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            							},
+            							"pushed" :
+            							{
+            							},
+            							"selected" :
+            							{
+            							},
+            							"disabled" :
+            							{
+            								"color" : nexacro.ColorObject("#bbbbbb"),
+            								"border" : nexacro.BorderObject("1px solid #d9d9d9")
+            							}
+            						}
+            					},
+            					"ListViewCellControl" :
+            					{
+            						"self" :
+            						{
+            							"enabled" :
+            							{
+            								"font" : nexacro.FontObject("12px \"Malgun Gothic\""),
+            								"color" : nexacro.ColorObject("#555555"),
+            								"border" : nexacro.BorderObject("1px solid #c2c2c2")
+            							},
+            							"mouseover" :
+            							{
+            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            							},
+            							"focused" :
+            							{
+            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            							},
+            							"pushed" :
+            							{
+            							},
+            							"disabled" :
+            							{
+            								"color" : nexacro.ColorObject("#bbbbbb"),
+            								"border" : nexacro.BorderObject("1px solid #d9d9d9")
+            							}
+            						}
             					}
             				}
             			},
@@ -896,49 +1248,32 @@
             											{
             												"font" : nexacro.FontObject("bold 12px \"Malgun Gothic\""),
             												"color" : nexacro.ColorObject("#2f2f2f"),
-            												"border" : nexacro.BorderObject("1px solid #cacaca"),
-            												"padding" : nexacro.PaddingObject("4px 4px 4px 4px")
+            												"padding" : nexacro.PaddingObject("4px 4px 4px 4px"),
+            												"border" : nexacro.BorderObject("0px none,0px none,1px solid #E4E3E3")
             											},
             											"disabled" :
             											{
             												"color" : nexacro.ColorObject("#999999")
             											}
-            										}
-            									}
-            								}
-            							},
-            							"body" :
-            							{
-            								"parent" :
-            								{
-            									"Grid" :
-            									{
-            										"self" :
-            										{
-            											"disabled_selected" :
+            										},
+            										"class" :
+            										[
             											{
-            											},
-            											"enabled" :
-            											{
-            												"color" : nexacro.ColorObject("#666666"),
-            												"border" : nexacro.BorderObject("1px solid #dbdee2"),
-            												"padding" : nexacro.PaddingObject("4px 4px 4px 4px")
-            											},
-            											"mouseover" :
-            											{
-            											},
-            											"selected" :
-            											{
-            											},
-            											"disabled" :
-            											{
-            												"color" : nexacro.ColorObject("#999999")
-            											},
-            											"blinked" :
-            											{
-            												"color" : nexacro.ColorObject("#ffffff")
+            												"grd-project" :
+            												{
+            													"self" :
+            													{
+            														"enabled" :
+            														{
+            															"font" : nexacro.FontObject("bold 12px \"Malgun Gothic\""),
+            															"color" : nexacro.ColorObject("#2f2f2f"),
+            															"padding" : nexacro.PaddingObject("4px 4px 4px 4px"),
+            															"border" : nexacro.BorderObject("0px none,0px none,1px solid #E4E3E3")
+            														}
+            													}
+            												}
             											}
-            										}
+            										]
             									}
             								}
             							},
@@ -1031,6 +1366,248 @@
             										"border" : nexacro.BorderObject("1px solid #c4c9cf")
             									}
             								}
+            							}
+            						}
+            					}
+            				}
+            			},
+            			"cellcombo" :
+            			{
+            				"parent" :
+            				{
+            					"cell" :
+            					{
+            						"class" :
+            						[
+            							{
+            								"info" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"class" :
+            															[
+            																{
+            																	"grd-project" :
+            																	{
+            																		"self" :
+            																		{
+            																			"enabled" :
+            																			{
+            																				"color" : nexacro.ColorObject("white")
+            																			},
+            																			"mouseover" :
+            																			{
+            																				"border" : nexacro.BorderObject("1px solid #117a8b")
+            																			}
+            																		}
+            																	}
+            																}
+            															]
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"primary" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"class" :
+            															[
+            																{
+            																	"grd-project" :
+            																	{
+            																		"self" :
+            																		{
+            																			"enabled" :
+            																			{
+            																				"color" : nexacro.ColorObject("white")
+            																			},
+            																			"mouseover" :
+            																			{
+            																				"border" : nexacro.BorderObject("1px solid #0062cc")
+            																			}
+            																		}
+            																	}
+            																}
+            															]
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"success" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"class" :
+            															[
+            																{
+            																	"grd-project" :
+            																	{
+            																		"self" :
+            																		{
+            																			"enabled" :
+            																			{
+            																				"color" : nexacro.ColorObject("white")
+            																			},
+            																			"mouseover" :
+            																			{
+            																				"border" : nexacro.BorderObject("1px solid #1e7e34")
+            																			}
+            																		}
+            																	}
+            																}
+            															]
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"cancel" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"class" :
+            															[
+            																{
+            																	"grd-project" :
+            																	{
+            																		"self" :
+            																		{
+            																			"enabled" :
+            																			{
+            																				"color" : nexacro.ColorObject("white")
+            																			},
+            																			"mouseover" :
+            																			{
+            																				"border" : nexacro.BorderObject("1px solid #1d2124")
+            																			}
+            																		}
+            																	}
+            																}
+            															]
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							},
+            							{
+            								"inprogress" :
+            								{
+            									"parent" :
+            									{
+            										"row" :
+            										{
+            											"parent" :
+            											{
+            												"body" :
+            												{
+            													"parent" :
+            													{
+            														"Grid" :
+            														{
+            															"class" :
+            															[
+            																{
+            																	"grd-project" :
+            																	{
+            																		"self" :
+            																		{
+            																			"enabled" :
+            																			{
+            																				"color" : nexacro.ColorObject("#212529")
+            																			},
+            																			"mouseover" :
+            																			{
+            																				"border" : nexacro.BorderObject("1px solid #e0a800")
+            																			}
+            																		}
+            																	}
+            																}
+            															]
+            														}
+            													}
+            												}
+            											}
+            										}
+            									}
+            								}
+            							}
+            						]
+            					},
+            					"GridCellControl" :
+            					{
+            						"self" :
+            						{
+            							"enabled" :
+            							{
+            								"font" : nexacro.FontObject("12px \"Malgun Gothic\"")
+            							}
+            						}
+            					},
+            					"ListViewCellControl" :
+            					{
+            						"self" :
+            						{
+            							"enabled" :
+            							{
+            								"font" : nexacro.FontObject("12px \"Malgun Gothic\"")
             							}
             						}
             					}
@@ -1156,71 +1733,6 @@
             					}
             				}
             			},
-            			"cellbutton" :
-            			{
-            				"parent" :
-            				{
-            					"GridCellControl" :
-            					{
-            						"self" :
-            						{
-            							"enabled" :
-            							{
-            								"font" : nexacro.FontObject("12px \"Malgun Gothic\""),
-            								"color" : nexacro.ColorObject("#555555"),
-            								"border" : nexacro.BorderObject("1px solid #c2c2c2")
-            							},
-            							"mouseover" :
-            							{
-            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            							},
-            							"focused" :
-            							{
-            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            							},
-            							"pushed" :
-            							{
-            							},
-            							"selected" :
-            							{
-            							},
-            							"disabled" :
-            							{
-            								"color" : nexacro.ColorObject("#bbbbbb"),
-            								"border" : nexacro.BorderObject("1px solid #d9d9d9")
-            							}
-            						}
-            					},
-            					"ListViewCellControl" :
-            					{
-            						"self" :
-            						{
-            							"enabled" :
-            							{
-            								"font" : nexacro.FontObject("12px \"Malgun Gothic\""),
-            								"color" : nexacro.ColorObject("#555555"),
-            								"border" : nexacro.BorderObject("1px solid #c2c2c2")
-            							},
-            							"mouseover" :
-            							{
-            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            							},
-            							"focused" :
-            							{
-            								"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            							},
-            							"pushed" :
-            							{
-            							},
-            							"disabled" :
-            							{
-            								"color" : nexacro.ColorObject("#bbbbbb"),
-            								"border" : nexacro.BorderObject("1px solid #d9d9d9")
-            							}
-            						}
-            					}
-            				}
-            			},
             			"cellcalendar" :
             			{
             				"parent" :
@@ -1248,32 +1760,6 @@
             				}
             			},
             			"cellcheckbox" :
-            			{
-            				"parent" :
-            				{
-            					"GridCellControl" :
-            					{
-            						"self" :
-            						{
-            							"enabled" :
-            							{
-            								"font" : nexacro.FontObject("12px \"Malgun Gothic\"")
-            							}
-            						}
-            					},
-            					"ListViewCellControl" :
-            					{
-            						"self" :
-            						{
-            							"enabled" :
-            							{
-            								"font" : nexacro.FontObject("12px \"Malgun Gothic\"")
-            							}
-            						}
-            					}
-            				}
-            			},
-            			"cellcombo" :
             			{
             				"parent" :
             				{
@@ -2492,23 +2978,13 @@
             					}
             				}
             			},
-            			"ProgressBar" :
-            			{
-            				"self" :
-            				{
-            					"enabled" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #aeaeae")
-            					}
-            				}
-            			},
             			"ProgressBarControl" :
             			{
             				"self" :
             				{
             					"enabled" :
             					{
-            						"border" : nexacro.BorderObject("1px solid #aeaeae")
+            						"border" : nexacro.BorderObject("1px solid #F0F0F0")
             					}
             				}
             			},
@@ -2546,7 +3022,7 @@
             						{
             							"enabled" :
             							{
-            								"color" : nexacro.ColorObject("#ffffff")
+            								"color" : nexacro.ColorObject("#000000")
             							}
             						}
             					},
@@ -2556,7 +3032,7 @@
             						{
             							"enabled" :
             							{
-            								"color" : nexacro.ColorObject("#ffffff")
+            								"color" : nexacro.ColorObject("#000000")
             							}
             						}
             					}
@@ -2901,6 +3377,49 @@
             			},
             			"Static" :
             			{
+            				"class" :
+            				[
+            					{
+            						"main-title" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"font" : nexacro.FontObject("normal 400 30px/normal \"Passion One\"")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"control-label" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"font" : nexacro.FontObject("normal 700 10pt/normal \"Passion One\""),
+            									"color" : nexacro.ColorObject("#fff")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"sta_RT_title07" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"color" : nexacro.ColorObject("#101010"),
+            									"font" : nexacro.FontObject("normal 500 10px \"Malgun Gothic\",\"Arial\""),
+            									"border" : nexacro.BorderObject("0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7, 0px solid #c7c7c7"),
+            									"padding" : nexacro.PaddingObject("0px 0px 0px 25px")
+            								}
+            							}
+            						}
+            					}
+            				],
             				"self" :
             				{
             					"disabled" :
@@ -2938,6 +3457,36 @@
             						"border" : nexacro.BorderObject("1px solid #d5d5d5")
             					}
             				}
+            			},
+            			"Div" :
+            			{
+            				"class" :
+            				[
+            					{
+            						"container" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"border" : nexacro.BorderObject("1px solid #c6c6c6")
+            								}
+            							}
+            						}
+            					},
+            					{
+            						"main-center" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"color" : nexacro.ColorObject("#FFF")
+            								}
+            							}
+            						}
+            					}
+            				]
             			},
             			"tabpage" :
             			{
@@ -3815,7 +4364,7 @@
         		imgcache[nexacro._getImageLocation("theme://images/chk_WF_Box_DS.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop_O.png")] = { width:9, height:6 };
-        		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop_P.png")] = { width:9, height:6 };
+        		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop_P.png")] = { width:0, height:0 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Grdexpand.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/rdo_WF_Radio.png")] = { width:14, height:14 };
         		imgcache[nexacro._getImageLocation("theme://images/rdo_WF_Radio_S.png")] = { width:14, height:14 };
@@ -3880,7 +4429,7 @@
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Hdec_O.png")] = { width:3, height:5 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Hdec_D.png")] = { width:3, height:5 };
         		imgcache[nexacro._getImageLocation("theme://images/img_grip.png")] = { width:11, height:11 };
-        		imgcache[nexacro._getImageLocation("theme://images/titlebar_icon.png")] = { width:16, height:16 };
+        		imgcache[nexacro._getImageLocation("theme://images/titlebar_icon.png")] = { width:0, height:0 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_TF_Min.png")] = { width:30, height:30 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_TF_Min_O.png")] = { width:30, height:30 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_TF_Min_D.png")] = { width:30, height:30 };
@@ -3896,8 +4445,11 @@
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Stepitem.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Stepitem_S.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_expand.png")] = { width:9, height:6 };
+        		imgcache[nexacro._getImageLocation("imagerc::img_WF_pagingNext.png")] = { width:0, height:0 };
+        		imgcache[nexacro._getImageLocation("theme://images/btn_expand_1.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Popupexpand.png")] = { width:3, height:5 };
         		imgcache[nexacro._getImageLocation("theme://images/chk_WF_Box_F.png")] = { width:13, height:13 };
+        		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop1_P.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/img_WF_Grdimg.png")] = { width:12, height:14 };
         		imgcache[nexacro._getImageLocation("theme://images/img_WF_Htrackbar.png")] = { width:8, height:5 };
         		imgcache[nexacro._getImageLocation("theme://images/img_WF_Htrackbar_D.png")] = { width:8, height:5 };

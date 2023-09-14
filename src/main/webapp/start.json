@@ -26,16 +26,19 @@
         ],
         "screen" :
         [    
-        {"id":"Desktop_screen","type":"desktop","themeid":"theme::blue"}
+        {"id":"Desktop_screen","type":"desktop","themeid":"theme::blue"},
+        {"id":"screen00_02","type":"desktop","themeid":"theme::blue"}
         ],
         "xadl" :
         [
         {
-        	"screenid":"Desktop_screen",
+        	"screenid":"screen00_02",
         	"launch":"./Application_Desktop.xadl.js",
         	"quickview":"./Application_Desktop.xadl.quickview.js",
         	"form":[
-        				"./FrameBase/Form_Work.xfdl.js"
+        				"./FrameBase/Form_Left.xfdl.js",
+        		"./FrameBase/Form_Top.xfdl.js",
+        		"./FrameBase/Form_Work.xfdl.js"
         	]
         }
         ],  
