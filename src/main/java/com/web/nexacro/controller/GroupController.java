@@ -15,16 +15,16 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/group")
-public class GroupCotroller {
-//tets
+public class GroupController {
+
     @Autowired
     GroupService groupService;
 
-    @PostMapping("/pm/createGroup")
-    public ModelAndView creteGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
+    @PostMapping("/addNewGroup")
+    public ModelAndView addNewGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
         NexacroUtils nexacroUtils = new NexacroUtils();
         Map params = nexacroUtils.getParamDataSet(request);
-        Map param = (Map) params.get("ds_creatGroup");
+        Map param = (Map) params.get("ds_group");
         groupService.insert(param);
         modelAndView.addObject("data",nexacroUtils);
         modelAndView.setViewName("nexacroView");
@@ -38,6 +38,28 @@ public class GroupCotroller {
         Map param = (Map) params.get("ds_cond");
 
         nexacroUtils.setDataset("ds_owner",groupService.select(param));
+        modelAndView.addObject("data",nexacroUtils);
+        modelAndView.setViewName("nexacroView");
+        return modelAndView;
+    }
+
+    @PostMapping("/updateGroup")
+    public ModelAndView updateGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
+        NexacroUtils nexacroUtils = new NexacroUtils();
+        Map params = nexacroUtils.getParamDataSet(request);
+        Map param = (Map) params.get("ds_group");
+        groupService.update(param);
+        modelAndView.addObject("data",nexacroUtils);
+        modelAndView.setViewName("nexacroView");
+        return modelAndView;
+    }
+
+    @PostMapping("/deleteGroup")
+    public ModelAndView deleteGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
+        NexacroUtils nexacroUtils = new NexacroUtils();
+        Map params = nexacroUtils.getParamDataSet(request);
+        Map param = (Map) params.get("ds_group");
+        groupService.delete(param);
         modelAndView.addObject("data",nexacroUtils);
         modelAndView.setViewName("nexacroView");
         return modelAndView;
