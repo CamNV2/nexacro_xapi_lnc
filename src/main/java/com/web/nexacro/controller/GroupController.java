@@ -20,11 +20,11 @@ public class GroupController {
     @Autowired
     GroupService groupService;
 
-    @PostMapping("/addNewGroup")
-    public ModelAndView addNewGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
+    @PostMapping("/pm/createGroup")
+    public ModelAndView creteGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
         NexacroUtils nexacroUtils = new NexacroUtils();
         Map params = nexacroUtils.getParamDataSet(request);
-        Map param = (Map) params.get("ds_group");
+        Map param = (Map) params.get("ds_creatGroup");
         groupService.insert(param);
         modelAndView.addObject("data",nexacroUtils);
         modelAndView.setViewName("nexacroView");
@@ -38,28 +38,6 @@ public class GroupController {
         Map param = (Map) params.get("ds_cond");
 
         nexacroUtils.setDataset("ds_owner",groupService.select(param));
-        modelAndView.addObject("data",nexacroUtils);
-        modelAndView.setViewName("nexacroView");
-        return modelAndView;
-    }
-
-    @PostMapping("/updateGroup")
-    public ModelAndView updateGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
-        NexacroUtils nexacroUtils = new NexacroUtils();
-        Map params = nexacroUtils.getParamDataSet(request);
-        Map param = (Map) params.get("ds_group");
-        groupService.update(param);
-        modelAndView.addObject("data",nexacroUtils);
-        modelAndView.setViewName("nexacroView");
-        return modelAndView;
-    }
-
-    @PostMapping("/deleteGroup")
-    public ModelAndView deleteGroup(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
-        NexacroUtils nexacroUtils = new NexacroUtils();
-        Map params = nexacroUtils.getParamDataSet(request);
-        Map param = (Map) params.get("ds_group");
-        groupService.delete(param);
         modelAndView.addObject("data",nexacroUtils);
         modelAndView.setViewName("nexacroView");
         return modelAndView;
