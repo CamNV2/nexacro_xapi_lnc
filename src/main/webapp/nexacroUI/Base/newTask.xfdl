@@ -155,8 +155,8 @@ this.Div00_Div00_00_Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro
 			this.Div00.form.Div_task_info.set_visible(true);
 			this.Div00.form.Div00_0111.set_top(850);
 		} 
-		this.ds_cond.setColumn(0, "PROJECTP_NM", this.ds_project.getColumn(obj.index,"PROJECTP_NM"));
-		this.ds_cond.setColumn(0, "DES", this.ds_project.getColumn(obj.index,"DES"));
+		this.ds_Task.setColumn(0, "PROJECTP_NM", this.ds_project.getColumn(obj.index,"PROJECTP_NM"));
+		this.ds_Task.setColumn(0, "DES", this.ds_project.getColumn(obj.index,"DES"));
 		this.getUserProject();
 	}else {
 		this.Div00.form.Div00_02.set_visible(false);
@@ -232,8 +232,8 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	
 	var id = "saveTask";  
-     var url = "http://localhost:8080/task/pm/createTask";
-     var reqDs = "ds_cond = ds_cond";
+     var url = "http://localhost:8080/task/createTask";
+     var reqDs = "ds_taskParam = ds_Task";
      var respDs = "ds_userProject=ds_userProject";
      var args = "";
      var callback = "fc_callback";
@@ -254,20 +254,19 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
           <Column id="USER_NM" type="STRING" size="256"/>
         </ColumnInfo>
       </Dataset>
-      <Dataset id="ds_cond">
+      <Dataset id="ds_Task">
         <ColumnInfo>
           <Column id="TASK_ID" type="STRING" size="256"/>
           <Column id="TB_OWNER" type="STRING" size="256"/>
-          <Column id="ED_DT" type="STRING" size="256"/>
+          <Column id="END_DT" type="STRING" size="256"/>
           <Column id="DES" type="STRING" size="256"/>
           <Column id="TASK_STATUS" type="STRING" size="256"/>
           <Column id="RESOLVE_DT" type="STRING" size="256"/>
           <Column id="TAG_ID" type="STRING" size="256"/>
           <Column id="PRJORITY" type="STRING" size="256"/>
-          <Column id="BILL" type="STRING" size="256"/>
           <Column id="PROJECT_ID" type="STRING" size="256"/>
           <Column id="TASK_NM" type="STRING" size="256"/>
-          <Column id="ST_DT" type="STRING" size="256"/>
+          <Column id="START_DT" type="STRING" size="256"/>
           <Column id="TASK_NM_SUB" type="STRING" size="256"/>
           <Column id="TAG" type="STRING" size="256"/>
           <Column id="PROJECTP_NM" type="STRING" size="256"/>
