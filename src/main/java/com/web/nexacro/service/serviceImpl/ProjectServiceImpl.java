@@ -1,7 +1,7 @@
 package com.web.nexacro.service.serviceImpl;
 
 
-import com.web.nexacro.mapper.CommConnectSql;
+import com.web.nexacro.mapper.CommSql;
 import com.web.nexacro.mapper.ProjectMapper;
 import com.web.nexacro.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +16,11 @@ public class ProjectServiceImpl implements ProjectService {
     ProjectMapper projectMapper;
 
     @Autowired
-    CommConnectSql commConnectSql;
+    CommSql commSql;
 
     @Override
     public List<Map<String, Object>> select(Map map) {
-        return commConnectSql.selectList("selectProject",map);
+        return commSql.selectList("selectProject",map);
     }
 
     @Override
