@@ -16,7 +16,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/group")
 public class GroupCotroller {
-//tets
+
     @Autowired
     GroupService groupService;
 

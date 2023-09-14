@@ -8,7 +8,6 @@ import java.util.Map;
 @Component
 public class GroupMapper extends CommonSql implements Group {
 
-
     @Override
     public List<Map<String, Object>> select(Map map) {
         return selectList("getGroup",map);

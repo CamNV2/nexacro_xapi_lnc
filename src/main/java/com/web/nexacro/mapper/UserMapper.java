@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class UserMapper extends CommConnectSql implements ComCrud {
+public class UserMapper extends CommSql implements ComCrud {
 
     public List<Map<String,Object>> SelectRoleLogin(Map param){
         List<Map<String,Object>> result = selectList("selectLogin",param);
