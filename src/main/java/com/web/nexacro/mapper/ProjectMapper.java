@@ -1,14 +1,13 @@
 package com.web.nexacro.mapper;
 
-import com.web.nexacro.Utils.ComCrud;
+import com.web.nexacro.Utils.Project;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
 
 @Component
-public class ProjectMapper extends CommConnectSql implements ComCrud {
+public class ProjectMapper extends CommonSql implements Project {
     @Override
     public List<Map<String, Object>> select(Map map) {
           return null;

@@ -133,9 +133,8 @@
         {
 
         	 var id = "getListProject";
-             var url = "http://localhost:8080/project/mb/selectListGroup";
-             var reqDs = "dsInput =dsInput";
-             var respDs = "ds_project=ds_project";
+             var url = "http://localhost:8080/project/getProjectList";
+             var respDs = "ds_projectLst=ds_projectLst";
              var args = "";
              var callback = "fc_callback";
              this.transaction(id, url, reqDs, respDs, args, callback, true, 0, false);
@@ -144,24 +143,14 @@
 
         this.fc_callback = function (serviceID, errCD, errMSG)
         {
-            if (errCD == -99)
-            {
-            	this.alert("session timeout!");
-        		return;
-            }
-
         	switch(serviceID) {
         	case 'getListProject':
-
         		break;
-        	case "getListGroupPm":
-        		break;
-        	case "insertGroup":
-
-        	break;
-        	case "creatproject":
-
-        	break;
+        	case "createProject":
+                if (errMSG == "" || errMSG == null) {
+                    alert("Create project success!");
+                }
+        	    break;
         	default:
         	}
         };

@@ -1,7 +1,7 @@
 package com.web.nexacro.controller;
 
 import com.web.nexacro.Utils.NexacroUtils;
-import com.web.nexacro.mapper.CommConnectSql;
+import com.web.nexacro.mapper.CommSql;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,13 +16,13 @@ import java.util.Map;
 @RequestMapping("/task")
 public class TaskController {
     @Autowired
-    CommConnectSql commConnectSql;
+    CommSql commSql;
     @PostMapping("/pm/createTask")
     public ModelAndView createProject(HttpServletRequest request, ModelAndView modelAndView) throws IOException {
         NexacroUtils nexacroUtils = new NexacroUtils();
         Map params = nexacroUtils.getParamDataSet(request);
         Map param = (Map) params.get("ds_cond");
-        commConnectSql.insert("insertTask",param);
+        commSql.insert("insertTask",param);
         modelAndView.addObject("data",nexacroUtils);
         modelAndView.setViewName("nexacroView");
         return modelAndView;

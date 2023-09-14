@@ -1,7 +1,7 @@
 package com.web.nexacro.service;
 
-import com.web.nexacro.Utils.ComCrud;
+import com.web.nexacro.Utils.Group;
 
-public interface GroupService extends ComCrud {
+public interface GroupService extends Group {
 
 }

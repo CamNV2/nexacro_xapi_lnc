@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Component
 
-public class CommConnectSql {
+public class CommonSql {
     @Autowired
     SqlSessionFactory sqlSessionFactory;
 
