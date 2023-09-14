@@ -27,12 +27,12 @@
             this.addChild(obj.name, obj);
 
 
-            obj = new Dataset("ds_group", this);
+                obj = new Dataset("ds_group", this);
             obj._setContents("<ColumnInfo><Column id=\"GROUP_ID\" type=\"STRING\" size=\"256\"/><Column id=\"GROUP_NM\" type=\"STRING\" size=\"256\"/></ColumnInfo>");
             this.addChild(obj.name, obj);
 
 
-            obj = new Dataset("ds_creatGroup", this);
+            obj = new Dataset("ds_group", this);
             obj._setContents("<ColumnInfo><Column id=\"GROUP_NM\" type=\"STRING\" size=\"256\"/></ColumnInfo><Rows><Row/></Rows>");
             this.addChild(obj.name, obj);
 
@@ -335,7 +335,7 @@
             this.addLayout(obj.name, obj);
             
             // BindItem Information
-            obj = new BindItem("item0","PopupDiv00.form.NewGroupName","value","ds_creatGroup","GROUP_NM");
+            obj = new BindItem("item0","PopupDiv00.form.NewGroupName","value","ds_group","GROUP_NM");
             this.addChild(obj.name, obj);
             obj.bind();
 
@@ -442,8 +442,8 @@
         this.PopupDiv00_Button00_onclick = function(obj,e)
         {
         	 var id = "insertGroup";
-             var url = "http://localhost:8080/group/pm/createGroup";
-             var reqDs = "ds_creatGroup=ds_creatGroup";
+             var url = "http://localhost:8080/group/addNewGroup";
+             var reqDs = "ds_group=ds_group";
         	  var respDs = "ds_owner=ds_owner";
              var args = "";
              var callback = "fc_callback";
