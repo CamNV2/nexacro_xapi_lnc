@@ -14,7 +14,7 @@
             this.set_border("1px solid #9c9c9c");
             if (Form == this.constructor)
             {
-                this._setFormPosition(550,800);
+                this._setFormPosition(581,811);
             }
             
             // Object(Dataset, ExcelExportObject) Initialize
@@ -225,7 +225,7 @@
             this.addChild(obj.name, obj);
             // Layout Functions
             //-- Default Layout : this
-            obj = new Layout("default","",550,800,this,function(p){});
+            obj = new Layout("default","",581,811,this,function(p){});
             this.addLayout(obj.name, obj);
             
             // BindItem Information
@@ -292,7 +292,7 @@
         					  , 400
         					  , null
         					  , null
-        					  , "FrameBase::add_group_Popup.xfdl");
+        					  , "Base::add_group_Popup.xfdl");
 
         	objChildFrame.set_dragmovetype("all");
         	objChildFrame.set_openalign("center middle");

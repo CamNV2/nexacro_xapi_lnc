@@ -134,7 +134,7 @@
             this.addLayout(obj.name, obj);
 
             //-- Normal Layout : this
-            obj = new Layout("screen00_02","screen00_02,Desktop_screen",1080,50,this,
+            obj = new Layout("screen00_02","screen00_02",1080,50,this,
             	//-- Layout function
             	function(p)
             	{
@@ -166,61 +166,12 @@
         }
 
 
-        this.Static_img_onclick = function(obj,e)
-        {
-        	var objChildFrame = new ChildFrame();
-        	objChildFrame.init("chf_popup2"
-        	                  , 0
-        					  , 0
-        					  , 500
-        					  , 400
-        					  , null
-        					  , null
-        					  , "Base::Login.xfdl");
-
-        	objChildFrame.set_dragmovetype("all");
-        	objChildFrame.set_openalign("center middle");
-
-
-        	objChildFrame.showModal(this.getOwnerFrame()
-        						  , null
-        						  , this
-        						  , "fn_popupCallback");
-        };
-
-        this.fn_popupCallback = function (id,type)
-        {
-        	if(type == "R"){
-        		var objChildFrame = new ChildFrame();
-        		objChildFrame.init("chf_popup2"
-        						  , 0
-        						  , 0
-        						  , 500
-        						  , 400
-        						  , null
-        						  , null
-        						  , "Base::Register.xfdl");
-
-        		objChildFrame.set_dragmovetype("all");
-        		objChildFrame.set_openalign("center middle");
-
-
-        		objChildFrame.showModal(this.getOwnerFrame()
-        							  , null
-        							  , this
-        							  , "fn_popupCallback");
-        	}
-        	if(type == "Y"){
-        	  this.Static_img_onclick();
-        	}
-        };
         });
         
         // Regist UI Components Event
         this.on_initEvent = function()
         {
             this.Static_setting.addEventHandler("onclick",this.Static00_00_onclick,this);
-            this.Static_img.addEventHandler("onclick",this.Static_img_onclick,this);
             this.Static_store.addEventHandler("onclick",this.Static00_00_onclick,this);
             this.Static_notify.addEventHandler("onclick",this.Static00_00_onclick,this);
             this.Static_search.addEventHandler("onclick",this.Static00_00_onclick,this);

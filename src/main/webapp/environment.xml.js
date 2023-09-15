@@ -21,6 +21,7 @@ if (nexacro.Environment)
         nexacro._addService("font", "file", "./_resource_/_font_/", "session", null, "", "0", "");
         nexacro._addService("Base", "form", "./Base/", "session", null, "", "0", "0");
         nexacro._addService("FrameBase", "form", "./FrameBase/", "session", null, "", "0", "0");
+        nexacro._addService("Common", "js", "./Common/", "session", null, "", "0", "0");
     	nexacro._component_uri = (nexacro._arg_compurl ? nexacro._arg_compurl : "./nexacrolib/component/");
     	nexacro._theme_uri = "./_resource_/_theme_/";
     	// load components
@@ -67,20 +68,7 @@ if (nexacro.Environment)
 
 	};
     // User Script
-    env.registerScript("environment.xml", function() {
-    this.transactionDB = function ()
-    {
-    	 var id = "getAll";
-         var url = "http://localhost:8080/login";
-         var reqDs = "dsInput =dsInput";
-         var respDs = "ds_tranction=IDDataset";
-         var args = "";
-         var callback = "received";
-         this.transaction(id, url, reqDs, respDs, args, callback, true, 0, false);
-    };
 
-
-    });
 					
     env = null;
 }

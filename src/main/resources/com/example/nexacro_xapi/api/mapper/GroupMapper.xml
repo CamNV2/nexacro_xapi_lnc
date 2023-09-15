@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.nexacro_xapi.api.mapper.GroupMapper" >
+    <select id="getList"
+            parameterType="com.example.nexacro_xapi.entity.GroupEntity"
+            resultType="com.example.nexacro_xapi.entity.GroupEntity">
+        SELECT 
+			id,title
+		FROM groups
+        <where>
+            deleted = 0
+            <if test="title != null and title != ''">
+             AND   title like '%' || #{title} || '%'
+            </if>
+        </where>
+    </select>
+    <insert id="create" useGeneratedKeys="true" keyProperty="id"  parameterType="com.example.nexacro_xapi.entity.GroupEntity">
+	  	INSERT INTO groups(
+	  		title
+	  		, deleted
+	  		, created_at
+	  		, updated_at
+	  		, created_by
+	  		, updated_by
+	  		)
+  		VALUES (
+  			#{title}
+  			, #{deleted}
+  			, #{created_at}
+  			, #{updated_at}
+  			, #{created_by}
+  			, #{updated_by}
+  			)
+	</insert>
+</mapper>
