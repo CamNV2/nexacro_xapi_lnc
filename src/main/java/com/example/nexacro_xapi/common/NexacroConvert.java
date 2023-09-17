@@ -22,6 +22,7 @@ public class NexacroConvert {
             PlatformData data = httpPlatformRequest.getData();
             return data.getDataSetList().get(dataSetData);
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
